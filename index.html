@@ -205,10 +205,22 @@
       padding: 25px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
     .project-card h3 {
       margin-top: 0;
+    }
+
+    .project-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .project-link:hover .project-card {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
     }
 
     .skills span {
@@ -632,22 +644,26 @@
   <div class="project-grid">
 
 
-    <div class="project-card">
+    <a href="noble-conference-center.html" class="project-link">
 
-      <h3>Conference & Collaboration Center</h3>
+      <div class="project-card">
 
-      <p>
-        Conceptual construction proposal developed during my Noble Texas Builders
-        internship incorporating site analysis, conceptual layout development,
-        estimating, scheduling, constructability, permitting, risk assessment,
-        coordination, and executive presentation.
-      </p>
+        <h3>Conference & Collaboration Center</h3>
 
-      <p>
-        <strong>Full project case study coming soon.</strong>
-      </p>
+        <p>
+          Conceptual construction proposal developed during my Noble Texas Builders
+          internship incorporating site analysis, conceptual layout development,
+          estimating, scheduling, constructability, permitting, risk assessment,
+          coordination, and executive presentation.
+        </p>
 
-    </div>
+        <p>
+          <strong>View full case study →</strong>
+        </p>
+
+      </div>
+
+    </a>
 
 
     <div class="project-card">
