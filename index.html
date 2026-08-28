@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Erick Alegria | Civil Engineering Portfolio</title>
 
   <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -17,25 +28,60 @@
     header {
       background-color: #111;
       color: white;
-      padding: 70px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 52px;
+      margin: 0 0 10px 0;
     }
 
-    header p {
-      font-size: 20px;
-      max-width: 750px;
+    .subtitle {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 780px;
       margin: auto;
+      font-size: 18px;
+      color: #ddd;
+    }
+
+    .header-buttons {
+      margin-top: 30px;
+    }
+
+    .button-primary {
+      display: inline-block;
+      background: white;
+      color: #111;
+      padding: 12px 22px;
+      margin: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .button-secondary {
+      display: inline-block;
+      border: 2px solid white;
+      color: white;
+      padding: 10px 22px;
+      margin: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
     }
 
     nav {
       background-color: #222;
-      padding: 15px;
+      padding: 16px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav a {
@@ -50,7 +96,7 @@
     }
 
     section {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
       padding: 60px 25px;
     }
@@ -61,16 +107,65 @@
       padding-bottom: 10px;
     }
 
-    .card {
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 20px;
+    }
+
+    .stat-card {
       background: white;
       padding: 25px;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .stat-card h3 {
+      margin: 0;
+      font-size: 27px;
+    }
+
+    .stat-card p {
+      margin-bottom: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
       margin: 25px 0;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
 
     .card h3 {
-      margin-bottom: 5px;
+      font-size: 24px;
+      margin-bottom: 3px;
+    }
+
+    .job-title {
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    .card ul {
+      padding-left: 22px;
+    }
+
+    .card li {
+      margin-bottom: 10px;
+    }
+
+    .selected-projects {
+      background-color: #f7f7f7;
+      padding: 20px;
+      margin-top: 25px;
+      border-left: 4px solid #222;
+    }
+
+    .selected-projects h4 {
+      margin-top: 0;
+      font-size: 18px;
     }
 
     .project-grid {
@@ -84,6 +179,10 @@
       padding: 25px;
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .project-card h3 {
+      margin-top: 0;
     }
 
     .skills span {
@@ -100,191 +199,372 @@
       color: white;
       text-align: center;
       padding: 30px;
+      margin-top: 40px;
     }
+
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 38px;
+      }
+
+      .subtitle {
+        font-size: 18px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
+
 <header>
+
   <h1>Erick Alegria</h1>
 
-  <p>
+  <p class="subtitle">
     Civil Engineering Student | Construction | Field Engineering
   </p>
 
-  <p>
-    Hands-on experience across commercial construction, industrial projects,
+  <p class="intro">
+    Hands-on experience across commercial construction, industrial and offshore projects,
     field operations, estimating, project coordination, and engineering fabrication.
+    Interested in building complex projects and developing a career in field engineering
+    and construction management.
   </p>
 
-  <div style="margin-top: 30px;">
-    <a href="#projects" style="
-      background: white;
-      color: #111;
-      padding: 12px 22px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;
-      margin-right: 10px;">
+  <div class="header-buttons">
+
+    <a href="#projects" class="button-primary">
       View Projects
     </a>
 
     <a href="https://linkedin.com/in/erick-alegria-899143228"
        target="_blank"
-       style="
-      border: 2px solid white;
-      color: white;
-      padding: 10px 22px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 5px;">
+       class="button-secondary">
       LinkedIn
     </a>
+
   </div>
+
 </header>
 
+
 <nav>
-  </nav>
 
-<section>
-  <div class="project-grid">
-
-    <div class="project-card">
-      <h3>2.5+ Years</h3>
-      <p>Industrial construction experience</p>
-    </div>
-
-    <div class="project-card">
-      <h3>9 Projects</h3>
-      <p>Active construction projects/packages supported</p>
-    </div>
-
-    <div class="project-card">
-      <h3>40+ RFIs</h3>
-      <p>RFIs and construction documents reviewed</p>
-    </div>
-
-    <div class="project-card">
-      <h3>Outstanding Intern</h3>
-      <p>Selected among 12 interns at Noble Texas Builders</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="about">
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
+
 </nav>
 
+
+<section>
+
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <h3>2.5+ Years</h3>
+      <p>Industrial construction experience</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>9 Active Projects</h3>
+      <p>Construction projects/packages supported during my Noble internship</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>40+ RFIs & Docs</h3>
+      <p>RFIs and project documents reviewed during my Noble internship</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Outstanding Intern</h3>
+      <p>Selected among 12 Noble Texas Builders interns</p>
+    </div>
+
+  </div>
+
+</section>
+
+
 <section id="about">
+
   <h2>About Me</h2>
 
   <p>
-    I am a Civil Engineering student at The University of Texas Rio Grande Valley with experience
-    in both commercial and industrial construction environments.
+    I am a Civil Engineering student at The University of Texas Rio Grande Valley
+    with hands-on experience in commercial construction, industrial construction,
+    offshore and maritime work, and engineering fabrication.
   </p>
 
   <p>
-    My experience has included field operations, estimating, safety, RFIs, construction drawings,
-    specifications, as-built documentation, project coordination, machining, and hands-on fabrication.
-    I am especially interested in field engineering, construction management, heavy civil construction,
-    industrial projects, and large-scale infrastructure.
+    Before moving into a construction management internship, I spent more than two years
+    working in industrial and marine construction environments. That field experience
+    gave me an early understanding of how drawings, planning, safety, quality, schedule,
+    and field execution come together on a real project.
   </p>
+
+  <p>
+    I am interested in field engineering, construction management, heavy civil,
+    industrial construction, energy infrastructure, and large-scale projects where
+    I can continue developing both technical and project leadership experience.
+  </p>
+
 </section>
+
 
 <section id="experience">
+
   <h2>Experience</h2>
 
+
   <div class="card">
+
     <h3>Noble Texas Builders</h3>
-    <strong>Construction Intern | Summer 2026</strong>
 
-    <p>
-      Completed rotations through Estimating, Field Operations, and Safety while supporting active
-      construction projects and reviewing RFIs, drawings, specifications, field conditions, and
-      as-built documentation.
-    </p>
+    <strong class="job-title">
+      Construction Intern | Summer 2026
+    </strong>
 
-    <p>
-      Named Outstanding Intern of the Term and led a three-person intern team developing a conceptual
-      construction proposal involving estimating, scheduling, constructability, permitting, and
-      project coordination.
-    </p>
+    <ul>
+
+      <li>
+        Named Outstanding Intern of the Term among 12 interns for performance,
+        initiative, and overall contribution.
+      </li>
+
+      <li>
+        Completed rotations across Estimating, Field Operations, and Safety while
+        supporting field coordination and reviewing 40+ RFIs and project documents.
+      </li>
+
+      <li>
+        Supported 9 active construction projects and packages by reviewing drawings,
+        specifications, field conditions, and as-built documentation.
+      </li>
+
+      <li>
+        Led a three-person intern team developing a conceptual construction proposal
+        incorporating design development, estimating, scheduling, constructability,
+        permitting, risk assessment, and executive presentation.
+      </li>
+
+    </ul>
+
   </div>
 
+
   <div class="card">
+
     <h3>Seatrium / Keppel AmFELS</h3>
-    <strong>Electrician | Electrician II | Electrician III</strong>
 
-    <p>
-      Worked on large-scale offshore industrial construction projects while interpreting engineering
-      drawings, coordinating field installations, supporting quality control, and working alongside
-      engineers, planners, and project managers.
-    </p>
+    <strong class="job-title">
+      Electrician | Multiple Levels | 2023–2025
+    </strong>
+
+    <ul>
+
+      <li>
+        Progressed through multiple electrician levels while supporting large-scale
+        maritime, offshore, energy, and industrial construction projects.
+      </li>
+
+      <li>
+        Interpreted electrical and construction drawings while supporting installation
+        of cable tray systems, lighting, conduit, cable routing, equipment connections,
+        and electrical terminations.
+      </li>
+
+      <li>
+        Worked with engineers, planners, supervisors, quality personnel, and multiple
+        trades to resolve field issues and complete installations in accordance with
+        drawings, safety requirements, quality standards, and project schedules.
+      </li>
+
+      <li>
+        Gained progressively greater responsibility across project installation,
+        maintenance, completion, punch-list work, and final project closeout activities.
+      </li>
+
+    </ul>
+
+
+    <div class="selected-projects">
+
+      <h4>Selected Industrial & Offshore Project Experience</h4>
+
+      <ul>
+
+        <li>
+          <strong>Pasha Hawaii LNG Containership Program — Brownsville, Texas</strong><br>
+          Supported electrical installation and completion work including cable trays,
+          lighting systems, electrical terminations, maintenance activities, and general
+          electrical construction support on large LNG-powered containership construction.
+        </li>
+
+        <li>
+          <strong>Salamanca Floating Production System — Brownsville, Texas</strong><br>
+          Supported electrical construction activities during work on an offshore
+          floating production system designed for deepwater Gulf of Mexico oil and gas
+          production.
+        </li>
+
+        <li>
+          <strong>EOG Resources — Agave Treater | Encinal, Texas</strong><br>
+          Supported industrial electrical work at a natural gas treating facility,
+          including conduit bending, cable pulls and routing, and electrical
+          terminations in an active industrial environment.
+        </li>
+
+        <li>
+          <strong>Offshore / U.S. East Coast Transit Assignment</strong><br>
+          Spent approximately three weeks offshore supporting final electrical
+          completion activities during vessel transit from Brownsville to the
+          U.S. East Coast, including terminations, punch-list items, and remaining
+          project closeout work.
+        </li>
+
+        <li>
+          <strong>Additional Marine & Industrial Projects</strong><br>
+          Supported additional vessel and industrial construction assignments,
+          taking on increasing responsibility as field experience and technical
+          proficiency developed.
+        </li>
+
+      </ul>
+
+    </div>
+
   </div>
+
 
   <div class="card">
-    <h3>UTRGV Machine Shop</h3>
-    <strong>Lab Assistant / Technician</strong>
 
-    <p>
-      Supported engineering students and faculty projects through machining, blueprint interpretation,
-      precision fabrication, CNC equipment, milling machines, lathes, and engineering laboratory operations.
-    </p>
+    <h3>The University of Texas Rio Grande Valley</h3>
+
+    <strong class="job-title">
+      Machine Shop / Lab Assistant / Technician | 2022–2024
+    </strong>
+
+    <ul>
+
+      <li>
+        Supported 110+ engineering students across four academic semesters with
+        machining, blueprint interpretation, and precision fabrication.
+      </li>
+
+      <li>
+        Contributed to 8 faculty-led research and academic projects by machining
+        custom components to engineering specifications and dimensional requirements.
+      </li>
+
+      <li>
+        Helped manage and maintain approximately $600,000+ in laboratory assets,
+        including milling machines, lathes, CNC systems, 3D printers, computers,
+        precision measurement tools, and fabrication equipment.
+      </li>
+
+    </ul>
+
   </div>
+
 </section>
 
+
 <section id="projects">
+
   <h2>Featured Projects</h2>
+
+  <p>
+    Selected professional and academic work demonstrating construction planning,
+    technical problem solving, design communication, and hands-on engineering experience.
+  </p>
+
 
   <div class="project-grid">
 
-    <div class="project-card">
-      <h3>Conference & Collaboration Center</h3>
-      <p>
-        Conceptual construction proposal developed during my Noble Texas Builders internship,
-        incorporating layout development, estimating, scheduling, constructability, permitting,
-        risk assessment, and project presentation.
-      </p>
-    </div>
 
     <div class="project-card">
-      <h3>AutoCAD & Engineering Drawings</h3>
+
+      <h3>Conference & Collaboration Center</h3>
+
       <p>
-        Selected drafting and engineering projects demonstrating layout development,
+        Conceptual construction proposal developed during my Noble Texas Builders
+        internship incorporating site analysis, conceptual layout development,
+        estimating, scheduling, constructability, permitting, risk assessment,
+        coordination, and executive presentation.
+      </p>
+
+      <p><strong>Full project case study coming soon.</strong></p>
+
+    </div>
+
+
+    <div class="project-card">
+
+      <h3>AutoCAD & Engineering Drawings</h3>
+
+      <p>
+        Selected drafting and engineering work demonstrating layout development,
         construction documentation, technical drawing, and design communication.
       </p>
+
+      <p><strong>Project gallery coming soon.</strong></p>
+
     </div>
 
+
     <div class="project-card">
+
       <h3>Engineering Fabrication</h3>
+
       <p>
-        Selected machine shop and fabrication work demonstrating blueprint interpretation,
-        machining, dimensional accuracy, and the relationship between engineering drawings
-        and physical construction.
+        Selected machine shop and fabrication work demonstrating blueprint
+        interpretation, machining, dimensional accuracy, and the relationship
+        between engineering drawings and physical construction.
       </p>
+
+      <p><strong>Project gallery coming soon.</strong></p>
+
     </div>
 
+
     <div class="project-card">
+
       <h3>Academic Civil Engineering Projects</h3>
+
       <p>
-        Selected coursework and future projects in structural engineering, transportation,
-        water resources, geotechnical engineering, and civil design.
+        Selected coursework and future projects in structural engineering,
+        transportation, water resources, geotechnical engineering, and civil design.
       </p>
+
+      <p><strong>Projects will be added as coursework progresses.</strong></p>
+
     </div>
+
 
   </div>
+
 </section>
 
+
 <section id="skills">
+
   <h2>Technical Skills</h2>
 
   <div class="skills">
+
     <span>AutoCAD</span>
     <span>Bluebeam Revu</span>
     <span>Procore</span>
@@ -297,25 +577,49 @@
     <span>Field Operations</span>
     <span>Quality Control</span>
     <span>Project Coordination</span>
+    <span>Industrial Construction</span>
+    <span>Electrical Construction</span>
+    <span>Machining & Fabrication</span>
+
   </div>
+
 </section>
+
 
 <section id="contact">
+
   <h2>Contact</h2>
 
-  <p><strong>Email:</strong> erick.alegria01@utrgv.edu</p>
+  <p>
+    <strong>Email:</strong>
+    erick.alegria01@utrgv.edu
+  </p>
 
   <p>
+
     <strong>LinkedIn:</strong>
-    <a href="https://linkedin.com/in/erick-alegria-899143228" target="_blank">
+
+    <a href="https://linkedin.com/in/erick-alegria-899143228"
+       target="_blank">
+
       linkedin.com/in/erick-alegria-899143228
+
     </a>
+
   </p>
+
 </section>
 
+
 <footer>
-  <p>© 2026 Erick Alegria | Civil Engineering Portfolio</p>
+
+  <p>
+    © 2026 Erick Alegria | Civil Engineering Portfolio
+  </p>
+
 </footer>
 
+
 </body>
+
 </html>
