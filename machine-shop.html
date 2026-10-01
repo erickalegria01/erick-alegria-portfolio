@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Machine Shop Fabrication | Erick Alegria</title>
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 12px 0;
+      font-size: 46px;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0 auto;
+      color: #ddd;
+      font-size: 18px;
+    }
+
+    nav {
+      background-color: #222;
+      padding: 16px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 14px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 55px 25px 70px;
+    }
+
+    .intro-card,
+    .project,
+    .additional-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    .intro-card {
+      padding: 28px;
+      margin-bottom: 32px;
+    }
+
+    .intro-card h2,
+    .section-heading {
+      margin-top: 0;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    .project {
+      overflow: hidden;
+    }
+
+    .project img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      background: #e6e6e6;
+    }
+
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-content h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 23px;
+    }
+
+    .tags {
+      color: #666;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 0;
+    }
+
+    .drawing-link {
+      display: inline-block;
+      margin-top: 8px;
+      color: #111;
+      font-weight: bold;
+      text-decoration: none;
+      border-bottom: 2px solid #111;
+    }
+
+    .drawing-link:hover {
+      opacity: 0.7;
+    }
+
+    .additional {
+      margin-top: 58px;
+    }
+
+    .additional-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .additional-card {
+      overflow: hidden;
+    }
+
+    .additional-card img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    .additional-content {
+      padding: 24px;
+    }
+
+    .additional-content h3 {
+      margin-top: 0;
+    }
+
+    .note {
+      color: #666;
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    .footer-note {
+      margin-top: 36px;
+      padding: 22px 0 0;
+      border-top: 1px solid #ccc;
+      color: #555;
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    @media (max-width: 600px) {
+
+      header h1 {
+        font-size: 36px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+
+      main {
+        padding: 40px 18px 55px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+<header>
+
+  <h1>Machine Shop Fabrication Projects</h1>
+
+  <p class="subtitle">
+    Engineering drawings translated into physical components through manual milling,
+    turning, drilling, tapping, threading, setup planning, and dimensional inspection.
+  </p>
+
+</header>
+
+
+<nav>
+
+  <a href="index.html">← Back to Portfolio</a>
+  <a href="#featured">Featured Projects</a>
+  <a href="#additional">Additional Work</a>
+
+</nav>
+
+
+<main>
+
+  <section class="intro-card">
+
+    <h2>UTRGV Machine Shop</h2>
+
+    <p>
+      These projects were completed from engineering drawings during my time working
+      in the UTRGV Machine Shop. I fabricated each component shown or referenced on
+      this page and used the projects to strengthen blueprint interpretation,
+      machining sequence planning, dimensional control, and precision measurement.
+    </p>
+
+    <p>
+      The finished-component photos below are the photographs currently available.
+      For two additional projects, the original engineering drawings are included even
+      though a final-part photograph is no longer available.
+    </p>
+
+  </section>
+
+
+  <section id="featured">
+
+    <h2 class="section-heading">
+      Featured Fabrication Projects
+    </h2>
+
+
+    <div class="project-grid">
+
+
+      <!-- PROJECT 1 -->
+
+      <article class="project">
+
+        <img
+          src="assets/machine-shop/finished-machining-cube.jpg"
+          alt="Finished geometric machining cube fabricated by Erick Alegria"
+          loading="lazy"
+        >
+
+        <div class="project-content">
+
+          <h3>
+            Geometric Machining Cube
+          </h3>
+
+          <p class="tags">
+            Milling · Multi-Side Setup · Layout · Dimensional Control
+          </p>
+
+          <p>
+            Fabricated a geometric cube from a technical drawing by machining features
+            across multiple faces while maintaining alignment between setups. The project
+            emphasized accurate workholding, blueprint interpretation, repeated setup,
+            and dimensional consistency.
+          </p>
+
+          <a
+            href="assets/machine-shop/drawing-machining-cube.jpg"
+            target="_blank"
+            class="drawing-link"
+          >
+            View engineering drawing →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PROJECT 2 -->
+
+      <article class="project">
+
+        <img
+          src="assets/machine-shop/finished-threaded-lathe-component.jpg"
+          alt="Finished threaded lathe component fabricated by Erick Alegria"
+          loading="lazy"
+        >
+
+        <div class="project-content">
+
+          <h3>
+            Threaded Lathe Component
+          </h3>
+
+          <p class="tags">
+            Turning · Facing · Threading · Chamfering · Precision Measurement
+          </p>
+
+          <p>
+            Machined a stepped cylindrical component on a manual lathe, including
+            multiple diameters, shoulder transitions, chamfers, and external threads.
+            The project required planning the machining sequence and maintaining
+            dimensions through multiple turning operations.
+          </p>
+
+          <a
+            href="assets/machine-shop/drawing-threaded-lathe-component.jpg"
+            target="_blank"
+            class="drawing-link"
+          >
+            View engineering drawing →
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- PROJECT 3 -->
+
+      <article class="project">
+
+        <img
+          src="assets/machine-shop/finished-precision-fixture.jpg"
+          alt="Finished precision machined fixture fabricated by Erick Alegria"
+          loading="lazy"
+        >
+
+        <div class="project-content">
+
+          <h3>
+            Precision Machined Fixture
+          </h3>
+
+          <p class="tags">
+            Milling · Drilling · Tapping · Boring · Dimensional Inspection
+          </p>
+
+          <p>
+            Fabricated a multi-feature component from an engineering drawing, including
+            a center bore, machined channels, drilled features, and threaded holes.
+            The project required maintaining feature locations and verifying the
+            finished component against drawing requirements.
+          </p>
+
+          <a
+            href="assets/machine-shop/drawing-precision-fixture.jpg"
+            target="_blank"
+            class="drawing-link"
+          >
+            View engineering drawing →
+          </a>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ADDITIONAL PROJECTS -->
+
+  <section id="additional" class="additional">
+
+    <h2 class="section-heading">
+      Additional Machining Projects
+    </h2>
+
+
+    <div class="additional-grid">
+
+
+      <!-- HOLE TEST BLOCK -->
+
+      <article class="additional-card">
+
+        <img
+          src="assets/machine-shop/drawing-hole-test-block.jpg"
+          alt="Hole Test Block engineering drawing"
+          loading="lazy"
+        >
+
+        <div class="additional-content">
+
+          <h3>
+            Hole Test Block
+          </h3>
+
+          <p class="tags">
+            Drilling · Countersinking · Counterboring · Tapping
+          </p>
+
+          <p>
+            Fabricated a test block containing multiple drilled and finished hole
+            features. The project focused on interpreting hole callouts, selecting
+            machining operations, and maintaining dimensional and positional
+            requirements.
+          </p>
+
+          <p class="note">
+            Final component fabricated; finished-part photograph unavailable.
+          </p>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- NIMS PROJECT -->
+
+      <article class="additional-card">
+
+        <img
+          src="assets/machine-shop/drawing-nims-machining-project.jpg"
+          alt="NIMS machining performance project engineering drawing"
+          loading="lazy"
+        >
+
+        <div class="additional-content">
+
+          <h3>
+            NIMS Machining Performance Project
+          </h3>
+
+          <p class="tags">
+            Milling · Drilling · Tapping · Tool Selection · RPM Planning
+          </p>
+
+          <p>
+            Completed a machining project from a NIMS technical drawing requiring
+            multiple drilled, counterbored, countersunk, and threaded features.
+            Planned tooling and spindle speeds before machining and verified
+            completed dimensions against drawing requirements.
+          </p>
+
+          <p class="note">
+            Performance project shown as project work; not presented as a NIMS certification.
+          </p>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </section>
+
+
+  <p class="footer-note">
+
+    <strong>Role:</strong>
+    Components machined and fabricated by Erick Alegria · UTRGV Machine Shop
+
+  </p>
+
+</main>
+
+
+<footer>
+
+  <p>
+    © 2026 Erick Alegria | Civil Engineering Portfolio
+  </p>
+
+</footer>
+
+</body>
+
+</html>
